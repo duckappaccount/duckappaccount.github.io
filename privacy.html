@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>オウエンレコ プライバシーポリシー</title>
+<style>
+  :root{
+    --bg:#FBFAF7;
+    --surface:#FFFFFF;
+    --surface-edge:#ECE7D9;
+    --ink:#1B2333;
+    --ink-soft:#5B6472;
+    --ink-faint:#8A93A3;
+    --accent:#A9832A;
+    --accent-soft:#F1E7CC;
+    --line:#E4E0D6;
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#10141F;
+      --surface:#171D2B;
+      --surface-edge:#252C3E;
+      --ink:#ECEDF2;
+      --ink-soft:#A7AEBD;
+      --ink-faint:#727A8C;
+      --accent:#E0BA55;
+      --accent-soft:#2C2716;
+      --line:#2A3142;
+      color-scheme:dark;
+    }
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%}
+
+  .page{
+    max-width:720px;
+    margin:0 auto;
+    padding-inline:20px;
+    padding-block:56px 80px;
+  }
+
+  .eyebrow{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:12px;
+    letter-spacing:.16em;
+    color:var(--accent);
+    font-weight:700;
+    margin-bottom:18px;
+  }
+  .eyebrow .dot{
+    width:6px;height:6px;border-radius:50%;
+    background:var(--accent);
+    flex:none;
+  }
+
+  h1{
+    font-family:"Shippori Mincho","Hiragino Mincho ProN",serif;
+    font-size:clamp(28px,6vw,38px);
+    line-height:1.35;
+    font-weight:700;
+    margin:0 0 10px;
+    text-wrap:balance;
+  }
+
+  .subtitle{
+    font-size:15px;
+    color:var(--ink-soft);
+    margin:0 0 28px;
+    line-height:1.7;
+  }
+
+  .meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 28px;
+    padding-block:16px;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    margin-bottom:36px;
+  }
+  .meta div{
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+  }
+  .meta span.label{
+    font-size:11px;
+    letter-spacing:.08em;
+    color:var(--ink-faint);
+  }
+  .meta span.value{
+    font-size:13.5px;
+    color:var(--ink);
+    font-variant-numeric:tabular-nums;
+    font-weight:600;
+  }
+
+  .lede{
+    font-size:16px;
+    line-height:1.95;
+    color:var(--ink);
+    margin-bottom:44px;
+  }
+  .lede strong{
+    color:var(--ink);
+    font-weight:700;
+  }
+
+  section.clause{
+    padding-block:34px;
+    border-top:1px solid var(--line);
+  }
+  section.clause:last-of-type{
+    border-bottom:1px solid var(--line);
+  }
+
+  .clause-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom:16px;
+  }
+  .clause-num{
+    font-family:"Shippori Mincho",serif;
+    font-size:15px;
+    color:var(--accent);
+    font-weight:700;
+    flex:none;
+    font-variant-numeric:tabular-nums;
+  }
+  h2{
+    font-family:"Shippori Mincho","Hiragino Mincho ProN",serif;
+    font-size:19px;
+    font-weight:700;
+    margin:0;
+    line-height:1.5;
+    text-wrap:balance;
+  }
+
+  .clause-body{
+    font-size:15px;
+    line-height:1.95;
+    color:var(--ink);
+    max-width:64ch;
+  }
+  .clause-body p{margin:0 0 14px;}
+  .clause-body p:last-child{margin-bottom:0;}
+
+  ul.items{
+    list-style:none;
+    margin:16px 0 0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  ul.items li{
+    background:var(--surface);
+    border:1px solid var(--surface-edge);
+    border-radius:10px;
+    padding:14px 16px;
+  }
+  ul.items .item-title{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-weight:700;
+    font-size:14px;
+    margin-bottom:5px;
+  }
+  ul.items .item-title .swatch{
+    width:8px;height:8px;border-radius:2px;
+    background:var(--accent);
+    flex:none;
+  }
+  ul.items .item-desc{
+    font-size:13.5px;
+    line-height:1.85;
+    color:var(--ink-soft);
+  }
+
+  .badge-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:18px;
+  }
+  .badge{
+    font-size:12.5px;
+    padding:6px 12px;
+    border-radius:999px;
+    background:var(--accent-soft);
+    color:var(--accent);
+    font-weight:700;
+    letter-spacing:.02em;
+  }
+
+  .contact-card{
+    margin-top:18px;
+    background:var(--surface);
+    border:1px solid var(--surface-edge);
+    border-radius:12px;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .contact-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  .contact-label{
+    font-size:11px;
+    letter-spacing:.08em;
+    color:var(--ink-faint);
+    margin-bottom:4px;
+  }
+  .contact-value{
+    font-size:16px;
+    font-weight:700;
+    color:var(--ink);
+    user-select:all;
+    font-variant-numeric:tabular-nums;
+    word-break:break-all;
+  }
+  button.copy-btn{
+    appearance:none;
+    border:1px solid var(--surface-edge);
+    background:var(--bg);
+    color:var(--ink);
+    font-family:inherit;
+    font-size:13px;
+    font-weight:700;
+    padding:9px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    flex:none;
+    transition:background .15s ease, transform .1s ease, border-color .15s ease;
+  }
+  button.copy-btn:hover{
+    border-color:var(--accent);
+  }
+  button.copy-btn:active{
+    transform:scale(.97);
+  }
+  button.copy-btn:focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:2px;
+  }
+  button.copy-btn[data-state="copied"]{
+    background:var(--accent-soft);
+    border-color:var(--accent);
+    color:var(--accent);
+  }
+  .contact-note{
+    font-size:13px;
+    color:var(--ink-soft);
+    line-height:1.8;
+  }
+
+  footer.page-footer{
+    margin-top:52px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  footer.page-footer .app-mark{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  footer.page-footer .app-mark .glyph{
+    width:26px;height:26px;
+    border-radius:7px;
+    background:linear-gradient(155deg,#1B2A4E,#0C1730);
+    display:flex;align-items:center;justify-content:center;
+    flex:none;
+  }
+  footer.page-footer .app-mark .glyph svg{
+    width:13px;height:13px;
+  }
+  footer.page-footer .app-mark span{
+    font-size:13px;
+    font-weight:700;
+    color:var(--ink-soft);
+  }
+  footer.page-footer .fine{
+    font-size:12px;
+    color:var(--ink-faint);
+  }
+
+  @media (max-width:480px){
+    .page{padding-block:40px 56px;}
+    .meta{gap:14px 24px;}
+    .contact-row{align-items:flex-start;}
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+</head>
+<body>
+
+<div class="page">
+
+  <div class="eyebrow"><span class="dot"></span>PRIVACY POLICY</div>
+  <h1>オウエンレコ プライバシーポリシー</h1>
+  <p class="subtitle">推し活・勉強のカウントダウン＆タスク管理アプリ「オウエンレコ」における、情報の取り扱いについて説明します。</p>
+
+  <div class="meta">
+    <div>
+      <span class="label">制定日</span>
+      <span class="value">2026年9月28日</span>
+    </div>
+    <div>
+      <span class="label">最終更新日</span>
+      <span class="value">2026年9月28日</span>
+    </div>
+    <div>
+      <span class="label">対象アプリ</span>
+      <span class="value">オウエンレコ（iOS）</span>
+    </div>
+  </div>
+
+  <div class="lede">
+    <p>オウエンレコ（以下「本アプリ」といいます）は、推し活の遠征準備や勉強のスケジュール管理を頑張るすべての方に、安心してお使いいただけるよう努めています。このページでは、本アプリがどのような情報を扱い、どのように保存しているかを、できるだけわかりやすい言葉で説明します。</p>
+    <p><strong>結論を先にお伝えすると、写真や予定の内容など、皆さんが入力・撮影・保存する情報は、すべてお使いの端末の中だけで管理されます。</strong>開発者を含め、外部のサーバーに送信されたり、他の誰かに見られたりすることはありません。一方で、本アプリは広告表示のためにGoogle AdMobを利用しており、広告識別子などの技術的な情報がGoogle社に送信される場合があります。詳しくは「02 広告の表示について」をご覧ください。</p>
+  </div>
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num">01</span>
+      <h2>本アプリが扱う情報</h2>
+    </div>
+    <div class="clause-body">
+      <p>本アプリの利用にあたり、以下の情報がお使いの端末内に保存されます。いずれも、本アプリの機能（カウントダウン表示・やることリスト・通知・ウィジェット）を動かすためだけに使われます。</p>
+      <ul class="items">
+        <li>
+          <div class="item-title"><span class="swatch"></span>写真</div>
+          <div class="item-desc">予定やタスクに設定する写真、ホーム画面の背景に設定する写真です。写真アプリから選んだ画像を端末内に保存し、一覧画面やウィジェットの表示に使います。</div>
+        </li>
+        <li>
+          <div class="item-title"><span class="swatch"></span>予定・やることの内容</div>
+          <div class="item-desc">予定の名前や日時、やることリストの内容、達成状況などです。入力された内容は端末内のデータベースに保存されます。</div>
+        </li>
+        <li>
+          <div class="item-title"><span class="swatch"></span>通知の設定内容</div>
+          <div class="item-desc">「3日前の朝9時に知らせる」といった通知のタイミングです。端末のOS機能を使って端末内で予約され、外部に送信されることはありません。</div>
+        </li>
+        <li>
+          <div class="item-title"><span class="swatch"></span>表示に関する設定</div>
+          <div class="item-desc">テーマカラー、ウィジェットの文字の書体・太さ・色、予定名の色といった、見た目の好みに関する設定です。</div>
+        </li>
+      </ul>
+      <div class="badge-row">
+        <span class="badge">アカウント登録なし</span>
+        <span class="badge">氏名・メールアドレスの入力なし</span>
+        <span class="badge">位置情報の取得なし</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num">02</span>
+      <h2>広告の表示について</h2>
+    </div>
+    <div class="clause-body">
+      <p>本アプリは、無料でお使いいただくために、Google社が提供する広告配信サービス「Google AdMob」を利用して、画面内にバナー広告を表示しています。</p>
+      <p>広告を表示する仕組み上、Google Mobile Ads SDK（Googleが提供するプログラム部品）が、お使いの端末の広告識別子や、本アプリの利用状況といった情報を、Google社に送信することがあります。これらの情報は、広告を配信するため、また（許可いただいた場合は）興味・関心に応じた広告を表示するために使われます。</p>
+      <p>iOS端末では、本アプリを初めて開いたとき、「トラッキングの許可」を確認するダイアログが表示されます。「許可しない」を選んだ場合でも広告自体は引き続き表示されますが、その方の興味・関心に合わせた広告（パーソナライズ広告）ではなく、一般的な広告が表示されます。この選択は、端末の「設定」アプリからいつでも変更できます。</p>
+      <ul class="items">
+        <li>
+          <div class="item-title"><span class="swatch"></span>Google プライバシーポリシー</div>
+          <div class="item-desc">Google社における情報の取り扱い全般について。https://policies.google.com/privacy</div>
+        </li>
+        <li>
+          <div class="item-title"><span class="swatch"></span>AdMobにおけるデータ収集について（Google公式ヘルプ）</div>
+          <div class="item-desc">広告配信のために収集される情報の詳細について。https://support.google.com/admob/answer/6128543</div>
+        </li>
+      </ul>
+      <p>なお、本アプリの「設定」画面から「広告を削除」（アプリ内課金）をご購入いただくと、アプリ内でのバナー広告の表示がなくなります。</p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num">03</span>
+      <h2>保存場所と、ウィジェットとの関係</h2>
+    </div>
+    <div class="clause-body">
+      <p>上記の情報は、いずれもお使いのiPhone・iPadの中だけに保存されます。本アプリは、写真や予定の内容を外部のサーバーに送信する仕組みを持っていません。</p>
+      <p>ホーム画面ウィジェットに表示するために、これらの情報の一部は本アプリとウィジェットの間で共有される専用の保存領域（App Group）を使いますが、これもお使いの端末内で完結しており、範囲は本アプリとそのウィジェットに限られます。外部に公開されたり、他のアプリから参照されたりすることはありません。</p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num">04</span>
+      <h2>第三者への提供・外部送信について</h2>
+    </div>
+    <div class="clause-body">
+      <p>本アプリが端末内に保存する、写真・予定の内容・やることリストといった情報（本ページ「01」参照）は、外部のサーバーに送信されることはありません。</p>
+      <p>一方で、広告表示のために組み込んでいるGoogle AdMob（本ページ「02」参照）については、広告配信の目的で、広告識別子などの情報がGoogle社に送信されます。これは本アプリが独自に収集しているものではなく、広告サービスをご利用いただく上でGoogle社との間に発生する情報のやり取りです。</p>
+      <p>上記以外の目的（アクセス解析、不具合分析など）で、外部サービスに情報を送信することはありません。今後この方針を変更する場合は、このページの内容を更新したうえで、最終更新日を変更してお知らせします。</p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num">05</span>
+      <h2>データの保存期間と削除</h2>
+    </div>
+    <div class="clause-body">
+      <p>保存されたデータは、予定やタスクを削除する操作、または本アプリ自体をアンインストールする操作によって、端末から削除されます。本アプリはサーバー側にデータを保持していないため、開発者側に問い合わせて削除していただく必要はありません。</p>
+      <p>なお、iCloudバックアップなど、iOS自体が提供するバックアップ機能をオンにしている場合、本アプリのデータもその対象に含まれることがあります。これはApple社が提供する仕組みによるものであり、本アプリが独自に行っているものではありません。</p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num">06</span>
+      <h2>お子様のプライバシーについて</h2>
+    </div>
+    <div class="clause-body">
+      <p>本アプリは、年齢を問わずどなたにもお使いいただけるよう設計されていますが、氏名や連絡先などの個人情報の入力を求める機能自体がないため、お子様を含め、どなたの個人情報も収集していません。</p>
+      <p>広告表示（本ページ「02」参照）についても、Google社が定めるポリシーに沿って配信されています。</p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num">07</span>
+      <h2>このポリシーの変更について</h2>
+    </div>
+    <div class="clause-body">
+      <p>本アプリの内容や、この方針は、必要に応じて変更することがあります。変更した場合は、このページの内容とページ上部の「最終更新日」を更新してお知らせします。本アプリを引き続きご利用いただく場合、変更後の内容に同意いただいたものとして取り扱います。</p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="clause-head">
+      <span class="clause-num">08</span>
+      <h2>お問い合わせ窓口</h2>
+    </div>
+    <div class="clause-body">
+      <p>本アプリの情報の取り扱いに関するご質問・ご意見は、以下の連絡先までお願いいたします。</p>
+      <div class="contact-card">
+        <div class="contact-row">
+          <div>
+            <div class="contact-label">お問い合わせ用メールアドレス</div>
+            <div class="contact-value" id="contact-email">uron5071@gmail.com</div>
+          </div>
+          <button class="copy-btn" id="copy-btn" type="button">コピーする</button>
+        </div>
+        <div class="contact-note">タップしても直接メールアプリが開かない場合があります。その際は上記のアドレスを選択・コピーして、普段お使いのメールアプリからお送りください。</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="page-footer">
+    <div class="app-mark">
+      <span class="glyph">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L14.2 9.2L21 12L14.2 14.8L12 22L9.8 14.8L3 12L9.8 9.2L12 2Z" fill="#E0BA55"/>
+        </svg>
+      </span>
+      <span>オウエンレコ</span>
+    </div>
+    <div class="fine">本ページは、オウエンレコのApp Store掲載用プライバシーポリシーです。</div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  try{
+    var btn = document.getElementById('copy-btn');
+    var emailEl = document.getElementById('contact-email');
+    if(!btn || !emailEl) return;
+    btn.addEventListener('click', function(){
+      var text = emailEl.textContent.trim();
+      function markCopied(){
+        btn.dataset.state = 'copied';
+        btn.textContent = 'コピーしました';
+        setTimeout(function(){
+          btn.dataset.state = '';
+          btn.textContent = 'コピーする';
+        }, 1800);
+      }
+      function selectFallback(){
+        try{
+          var range = document.createRange();
+          range.selectNodeContents(emailEl);
+          var sel = window.getSelection();
+          sel.removeAllRanges();
+          sel.addRange(range);
+        }catch(e){}
+      }
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(markCopied).catch(selectFallback);
+      } else {
+        selectFallback();
+      }
+    });
+  }catch(e){}
+})();
+</script>
+
+</body>
+</html>
